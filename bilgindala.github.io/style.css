@@ -6,6 +6,7 @@ html {
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
+  color: #392c2c;
 }
 li {
   list-style: none;
@@ -31,6 +32,7 @@ body {
   font-size: 20px;
   line-height: 24px;
 }
+
 .button {
   background: linear-gradient(to top, #1a81df, #03a9f4);
   outline: none;
@@ -42,7 +44,7 @@ body {
 }
 @media (max-width: 600px) {
   .container {
-    width: 90%;
+    width: 82%;
     margin: 0 auto;
   }
   .title {
@@ -62,14 +64,17 @@ body {
 .header__left {
   display: flex;
 }
+.header__right-link {
+  margin: 2px;
+}
 .header__logo {
   margin-right: 32px;
-  margin-left: 40px;
+  margin-left: 31px;
 }
 .header__title {
   margin-bottom: 5px;
   color: #1a81df;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 32.76px;
 }
@@ -79,9 +84,12 @@ body {
   line-height: 18.29px;
   width: 360px;
 }
+.header__text-min {
+  display: none;
+}
 .header__nav {
   padding: 0;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .header__wrapper {
   position: relative;
@@ -93,8 +101,9 @@ body {
 .header__menu {
   display: none;
   position: absolute;
-  top: 65px;
+  top: 90px;
   font-size: 20px;
+  font-weight: 600;
   margin-left: 100px;
 }
 .header__menu.is-active {
@@ -105,19 +114,19 @@ body {
   padding: 0 40px;
 }
 .header__hamburger {
-  width: 40px;
+  width: 33.5px;
   height: 4px;
   transform: translate(-50%, -50%);
   background-color: #392c2c;
   border-radius: 5px;
   transition: 0.5s;
   display: inline-block;
-  margin-left: 12px;
+  margin-left: 17px;
 }
 .header__hamburger:before,
 .header__hamburger:after {
   content: '';
-  width: 40px;
+  width: 33.5px;
   height: 4px;
   position: absolute;
   background-color: #392c2c;
@@ -145,32 +154,41 @@ body {
 @media (max-width: 600px) {
   .header {
     margin-top: 40px;
-    display: block;
+    justify-content: start;
   }
   .header__logo {
     width: 75px;
     height: 56px;
-    margin-left: 5px;
+    margin-left: 27px;
   }
   .header__title {
     font-size: 28px;
-    line-height: 18px;
+    line-height: 31px;
     width: 133px;
   }
   .header__text {
-    font-size: 10px;
+    display: none;
+  }
+  .header__text-min {
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
     line-height: 16px;
     width: 224px;
+    margin-top: 5px;
+    margin-left: 84px;
   }
   .header__right {
     display: none;
   }
   .header__nav {
-    margin-top: 20px;
+    margin-top: 8px;
+    margin-left: 0px;
   }
   .header__menu {
-    top: 80px;
+    top: 125px;
     font-size: 13px;
+    font-weight: 600;
     margin-left: 0px;
   }
   .header__menu li {
@@ -185,7 +203,7 @@ body {
   border-radius: 50px;
   display: flex;
   justify-content: space-between;
-  margin-top: 70px;
+  margin-top: 66px;
   padding: 70px 70px 0 70px;
   height: 590px;
   background-color: #fed23e;
@@ -204,33 +222,37 @@ body {
 }
 @media (max-width: 600px) {
   .budda {
-    margin: 50px auto;
+    margin: 41px auto;
     flex-direction: column;
-    padding: 40px 4px 0 40px;
+    padding: 40px 4px 0 0px;
     width: 100%;
-    height: 550px;
+    height: 652px;
+    overflow: hidden;
   }
   .budda__text {
     font-size: 14px;
     line-height: 17px;
-    width: 80%;
+    width: 225px;
+    margin-left: 40px;
+    margin-top: 7px;
   }
   .budda__img {
-    width: 85%;
-    height: 310px;
+    width: 100%;
+    height: 394px;
   }
 }
 .fund__title {
   margin-top: 70px;
 }
 .fund__text {
-  margin-top: 40px;
+  margin-top: 34px;
 }
 .fund__text-2 {
   margin-top: 10px;
 }
 .fund__director {
-  margin-top: 40px;
+  margin-top: 43px;
+  margin-left: 10px;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -239,6 +261,9 @@ body {
   .fund__director {
     font-size: 14px;
     line-height: 17px;
+    margin-top: 35px;
+    width: 206px;
+    margin-left: 12px;
   }
 }
 .lama {
@@ -256,18 +281,18 @@ body {
 }
 .lama__text {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
 }
 .lama__text-2 {
-  margin-top: 20px;
+  margin-top: 13px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
 }
 .lama__box {
   margin-top: 96px;
-  border-radius: 50px 0 0 50px;
+  border-radius: 30px 0 0 30px;
   background-color: #fed23e;
   padding: 70px 32px 40px 32px;
   width: 476px;
@@ -293,6 +318,7 @@ body {
   position: relative;
   margin-top: 17px;
   font-weight: 400;
+  width: 383px;
   font-style: italic;
   font-size: 14px;
   line-height: 17px;
@@ -302,15 +328,15 @@ body {
   position: absolute;
   content: '';
   top: 0;
-  left: -40px;
+  left: -43px;
   content: url(img/quotes-1.png);
 }
 .lama__comments::after {
   content: '';
   content: url(img/quotes-2.png);
   position: absolute;
-  top: 60px;
-  right: 20px;
+  top: 69px;
+  right: -36px;
 }
 .lama__comments-2 {
   position: relative;
@@ -350,6 +376,9 @@ body {
   left: 45px;
   content: url(img/headphones.png);
 }
+.lama__andgaft-min {
+  display: none;
+}
 @media (max-width: 600px) {
   .lama {
     flex-direction: column-reverse;
@@ -357,6 +386,7 @@ body {
     background-color: #fed23e;
   }
   .lama__text {
+    margin-top: 12px;
     font-size: 16px;
     line-height: 19px;
     text-align: left;
@@ -374,11 +404,16 @@ body {
     background-color: inherit;
   }
   .lama__img {
-    top: 240px;
+    top: 237px;
+    left: 43px;
   }
   .lama__andgaft {
+    display: none;
+  }
+  .lama__andgaft-min {
+    display: block;
     width: 100%;
-    height: 208px;
+    /* height: 208px; */
   }
   .lama__gaft {
     display: none;
@@ -396,11 +431,11 @@ body {
     text-align: center;
   }
   .lama__btn {
-    margin: 10px auto;
+    margin: 10px auto 40px auto;
   }
 }
 .projects {
-  margin-top: 70px;
+  margin-top: 67px;
 }
 .projects__header {
   display: flex;
@@ -418,19 +453,25 @@ body {
   margin-top: 40px;
 }
 .projects__text-2 {
-  margin-top: 10px;
+  margin-top: 13px;
 }
 .projects__text-3 {
-  margin-top: 10px;
+  margin-top: 14px;
 }
 @media (max-width: 600px) {
   .projects__header {
     flex-direction: column;
   }
+  .projects__title {
+    margin-right: 22px;
+  }
   .projects__subtitle {
-    margin-top: 30px;
+    margin-top: 34px;
     font-size: 28px;
     line-height: 34px;
+  }
+  .projects__text {
+    margin-top: 35px;
   }
 }
 
@@ -441,6 +482,8 @@ body {
 .photo__img {
   border-radius: 40px;
   width: 100%;
+  object-fit: cover;
+  overflow: hidden;
   max-height: 600px !important;
 }
 .photo__btn-left {
@@ -469,7 +512,7 @@ body {
   }
 }
 .audio {
-  margin-top: 70px;
+  margin-top: 66px;
 }
 .audio__header {
   display: flex;
@@ -480,12 +523,14 @@ body {
   display: flex;
   justify-content: space-around;
 }
-.audio__head {
+.audio__head-subtitle {
   margin-left: 32px;
+  font-size: 30px;
 }
 .audio__img {
   position: absolute;
-  left: 10px;
+  left: -1px;
+  top: 31px;
 }
 .audio__book {
   width: 300px;
@@ -538,19 +583,22 @@ body {
 }
 @media (max-width: 600px) {
   .audio__img {
-    width: 118px;
-    height: 118px;
+    width: 115px;
+    height: 84px;
+    top: 23px;
+    left: 17px;
   }
   .audio__title {
-    margin-left: 97px;
-    margin-top: 5px;
+    margin-left: 105px;
+    margin-top: 0px;
     font-size: 18px;
     line-height: 22px;
-    width: 165px;
+    width: 136px;
   }
   .audio__subtitle {
     width: 165px;
-    margin-left: 97px;
+    margin-left: 105px;
+    margin-top: 10px;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: -0.03em;
@@ -558,9 +606,13 @@ body {
   .audio__header {
     flex-direction: column;
   }
-  .audio__head {
+  .audio__head-title {
+    margin-right: 24px;
+  }
+  .audio__head-subtitle {
     margin-top: 30px;
-    margin-left: 0;
+    margin-top: 34px;
+    margin-right: 151px;
     font-size: 28px;
     line-height: 34px;
   }
@@ -571,12 +623,15 @@ body {
     display: none;
   }
   .audio__box {
-    height: 247px;
-    padding: 32px;
-    margin: 10px auto;
+    max-height: 243px;
+    padding: 30px;
+    margin: 17px auto;
+    border-radius: 30px;
+    justify-content: flex-start;
   }
   .audio__btn {
     margin-left: 20px;
+    margin-top: 15px;
   }
 }
 .modal {
@@ -745,13 +800,16 @@ main.active {
 }
 .books__head {
   margin-left: 32px;
+  font-size: 30px;
+  line-height: 37px;
 }
 .books__items {
   margin-top: 40px;
 }
 .books__img {
   position: absolute;
-  left: 10px;
+  left: -7px;
+  top: 32px;
 }
 .books__box {
   position: relative;
@@ -765,7 +823,7 @@ main.active {
   background-color: #fff;
 }
 .books__title {
-  margin-top: 350px;
+  margin-top: 316px;
   text-align: left;
   font-weight: 600;
   font-size: 24px;
@@ -796,13 +854,13 @@ main.active {
 }
 .books__btn-left {
   position: absolute;
-  top: 430px;
-  left: -35px;
+  top: 352px;
+  left: -84px;
 }
 .books__btn-right {
   position: absolute;
-  top: 430px;
-  right: -50px;
+  top: 352px;
+  right: -84px;
 }
 .books__btn::before {
   content: '';
@@ -814,6 +872,8 @@ main.active {
   .books__img {
     width: 118px;
     height: 118px;
+    top: 32px;
+    left: 7px;
   }
   .books__title {
     margin-left: 97px;
@@ -848,14 +908,15 @@ main.active {
   .books__box {
     height: 247px !important;
     padding: 32px;
-    margin: 20px auto;
+    border-radius: 30px;
+    margin: 36px auto;
   }
   .books__btn {
     margin-left: 20px;
   }
 }
 .footer {
-  margin-top: 70px;
+  margin-top: 63px;
   margin-bottom: 70px;
   position: relative;
   height: 155px;
@@ -878,7 +939,8 @@ main.active {
   line-height: 16px;
 }
 .footer__img {
-  height: 71px;
+  height: 75px;
+  margin-left: 8px;
 }
 .footer__left {
   padding: 30px;
@@ -906,7 +968,6 @@ main.active {
   line-height: 15px;
 }
 .footer__contact {
-  margin-top: 16px;
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
@@ -914,27 +975,41 @@ main.active {
 .footer__link {
   margin-left: 15px;
 }
+.footer__text-min {
+  display: none;
+}
 @media (max-width: 600px) {
   .footer {
     flex-direction: column;
     height: 438px;
     padding: 0 0 40px 0;
+    margin-top: 86px;
   }
   .footer__img {
-    height: 56px;
+    height: 58px;
+    margin-bottom: 50px;
   }
   .footer__left {
     width: 100%;
     height: 198px;
     padding: 40px;
+    position: relative;
   }
   .footer__title {
-    font-size: 20px;
-    line-height: 110%;
+    font-size: 28px;
+    line-height: 29px;
+    margin-bottom: 44px;
+    color: #392c2c;
   }
   .footer__text {
+    display: none;
+  }
+  .footer__text-min {
+    position: absolute;
+    font-weight: bold;
     font-size: 13px;
     line-height: 16px;
+    top: 109px;
   }
   .footer__middle {
     margin-left: 40px;
