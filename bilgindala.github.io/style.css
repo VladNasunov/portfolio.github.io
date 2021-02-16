@@ -297,7 +297,7 @@ body {
   background-color: #fed23e;
   padding: 70px 32px 40px 32px;
   width: 476px;
-  margin-left: 50px;
+  margin-left: 51px;
 }
 .lama__gaft {
   margin-left: 94px;
@@ -376,6 +376,9 @@ body {
   position: absolute;
   left: 45px;
   content: url(img/headphones.png);
+}
+.lama__andgaft {
+  height: 100%;
 }
 .lama__andgaft-min {
   display: none;
