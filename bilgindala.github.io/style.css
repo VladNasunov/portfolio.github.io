@@ -13,6 +13,7 @@ li {
 }
 a {
   text-decoration: none;
+  color: #fff;
 }
 body {
   background: #f2f6fa;
@@ -129,6 +130,9 @@ body {
 }
 .header__menu li {
   padding: 0 40px;
+}
+.header__menu-link {
+  color: #392c2c;
 }
 .header__hamburger {
   width: 33.5px;
