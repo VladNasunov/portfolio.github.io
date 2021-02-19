@@ -13,13 +13,7 @@
         }
         })
 
-    // jQuery(document).ready(function() {
-    //     jQuery('.header__menuToggle').click(function(e) {
-    //       jQuery(this).toggleClass('is-active');
-    //       jQuery('.header__menu').toggleClass('is-active');
-    //       e.preventDefault();
-    //     });
-    // })
+
 $('.photo__slider').slick({
     dots: true,
     speed: 500,
@@ -47,7 +41,7 @@ $(document).ready(function(){
    
   });
 
-  const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const overlay = document.getElementById('overlay');
 
 openModalButtons.forEach(button => {
@@ -64,7 +58,6 @@ overlay.addEventListener('click', () => {
     })
 })
 
-
 function openModal(modal) {
     if (modal == null) return
     modal.classList.add('active')
@@ -76,3 +69,11 @@ function closeModal(modal) {
     modal.classList.remove('active')
     overlay.classList.remove('active')
 }
+document.addEventListener('keydown', function(e){
+    if(e.key ==  "Escape"){
+        const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+        closeModal(modal)
+    })
+    }
+})
