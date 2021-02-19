@@ -26,6 +26,15 @@ body {
   color: #1a81df;
   font-weight: 800;
   line-height: 39px;
+  margin-left: 20px;
+  position: relative;
+}
+.title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -22px;
+  content: url(./img/fund_before.png);
 }
 .text {
   font-weight: 400;
@@ -50,6 +59,14 @@ body {
   .title {
     font-size: 32px;
     line-height: 39px;
+    font-weight: 800;
+  }
+  .title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -22px;
+    content: url(./img/fund_before_min.png);
   }
   .text {
     font-size: 16px;
@@ -204,13 +221,14 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 66px;
-  padding: 70px 70px 0 70px;
+  padding: 38px 70px 0 70px;
   height: 590px;
   background-color: #fed23e;
   box-shadow: 0px 30px 50px rgba(22, 67, 113, 0.17);
   position: relative;
 }
 .budda__text {
+  margin-top: 32px;
   width: 300px;
   font-weight: 600;
   font-size: 24px;
@@ -246,25 +264,43 @@ body {
   margin-top: 70px;
 }
 .fund__text {
-  margin-top: 34px;
+  margin-top: 40px;
 }
 .fund__text-2 {
-  margin-top: 10px;
+  margin-top: 13px;
 }
 .fund__director {
-  margin-top: 43px;
-  margin-left: 10px;
+  margin-top: 40px;
+  margin-left: 20px;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
+  position: relative;
+}
+.fund__director::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -21px;
+  content: url(./img/anatoly_before.png);
 }
 @media (max-width: 600px) {
+  .fund__text {
+    margin-top: 34px;
+  }
   .fund__director {
     font-size: 14px;
     line-height: 17px;
-    margin-top: 35px;
+    margin-top: 31px;
     width: 206px;
-    margin-left: 12px;
+    margin-left: 19px;
+  }
+  .fund__director::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    content: url(./img/anatoly_before_min.png);
   }
 }
 .lama {
@@ -295,18 +331,23 @@ body {
   margin-top: 96px;
   border-radius: 30px 0 0 30px;
   background-color: #fed23e;
-  padding: 70px 32px 40px 32px;
-  width: 476px;
+  padding: 70px 12px 40px 32px;
+  /* width: 476px; */
   margin-left: 51px;
 }
+
 .lama__gaft {
-  margin-left: 94px;
-  margin-top: 30px;
+  margin-left: 85px;
+  margin-top: 32px;
   position: relative;
+  font-size: 18px;
+  line-height: 22px;
 }
 .lama__gaft-2 {
-  margin-left: 94px;
-  margin-top: 5px;
+  margin-left: 85px;
+  margin-top: 0px;
+  font-size: 18px;
+  line-height: 22px;
 }
 .lama__gaft::before {
   content: '';
@@ -363,7 +404,7 @@ body {
   right: 20px;
 }
 .lama__btn {
-  margin-top: 48px;
+  margin-top: 37px;
   margin-left: 217px;
   position: relative;
   color: #fff;
@@ -394,11 +435,13 @@ body {
     font-size: 16px;
     line-height: 19px;
     text-align: left;
+    letter-spacing: -1px;
   }
   .lama__text-2 {
     text-align: left;
     font-size: 16px;
     line-height: 19px;
+    letter-spacing: -1px;
   }
   .lama__box {
     margin-top: 130px;
@@ -410,6 +453,8 @@ body {
   .lama__img {
     top: 237px;
     left: 43px;
+    width: 228px;
+    height: 120px;
   }
   .lama__andgaft {
     display: none;
@@ -525,11 +570,13 @@ body {
 .audio__items {
   margin-top: 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .audio__head-subtitle {
   margin-left: 32px;
+  font-weight: 600;
   font-size: 30px;
+  line-height: 37px;
 }
 .audio__img {
   position: absolute;
@@ -611,7 +658,8 @@ body {
     flex-direction: column;
   }
   .audio__head-title {
-    margin-right: 24px;
+    margin-right: 23px;
+    margin-top: 2px;
   }
   .audio__head-subtitle {
     margin-top: 30px;
@@ -629,7 +677,7 @@ body {
   .audio__box {
     max-height: 243px;
     padding: 32px;
-    margin: 17px auto;
+    margin: 0px auto 17px auto;
     border-radius: 30px;
     justify-content: space-between;
   }
@@ -801,10 +849,11 @@ main.active {
   align-items: center;
   margin-top: 70px;
 }
-.books__head {
+.books__header-subtitle {
   margin-left: 32px;
   font-size: 30px;
   line-height: 37px;
+  font-weight: 600;
 }
 .books__items {
   margin-top: 40px;
@@ -895,8 +944,12 @@ main.active {
   }
   .books__header {
     flex-direction: column;
+    margin-top: 25px;
   }
-  .books__head {
+  .books__header-title {
+    display: none;
+  }
+  .books__header-subtitle {
     margin-top: 30px;
     margin-left: 0;
     font-size: 28px;
